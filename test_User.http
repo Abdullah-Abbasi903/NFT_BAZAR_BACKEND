@@ -1,0 +1,108 @@
+####### user Signup
+
+ ####### /user-> router, /signup ->controller
+POST http://localhost:8080/user/signup   
+Content-Type: application/json
+
+{
+    "password":"1234",
+    "email":"Burhan@gmail.com",  
+    "phone_No": "03150526698",
+    "fullname": "Burhan akabar"
+}
+
+
+####### user login
+
+POST http://localhost:8080/user/login
+Content-Type: application/json
+
+{
+    "password":"Abc_123!",
+    "email":"shero123464zshah@gmail.com",
+    "phone_No": "12345678910",
+    "fullname": "Abdullahabbasi"
+}
+
+
+####### NFT creation
+
+POST http://localhost:8080/user/create_Nft
+Content-Type: application/json
+
+{
+    "name": "Burhan  nft",
+    "description": "this is burhan first nft",
+    "price": "150$",
+    "creator_email": "Burhan@gmail.com"
+}
+
+
+####### Subscription status
+
+POST http://localhost:8080/user/buy_Subscription
+Content-Type: application/json
+
+{
+     "seller_Email": "tanveerabbasi@gmail.com",
+     "refrence_No" : "123456789"
+} 
+
+
+####### Subscription status checking
+
+GET http://localhost:8080/Admin/get_Subs
+
+
+####### Subscription status to conformation
+
+PATCH http://localhost:8080/Admin/confirm_Subs   
+Content-Type: application/json
+
+{
+    "Id":"659a78834738ca4c6008e28c"
+    
+}
+
+
+####### Order Creation
+
+POST http://localhost:8080/user/order 
+Content-Type: application/json
+
+{
+    "Buyer_Email" : "Abdullah@gmail.com" ,
+    "Transection_id": "123456" ,
+    "payment_Info":"Sadapay",
+    "nft_Id": "658dcaae6b7ab88d2532a53e"
+} 
+
+
+####### Getting confirm users
+
+GET http://localhost:8080/NFT/get_nft
+
+
+####### ADMIN Signup
+
+ ####### /user-> router, /signup ->controller
+POST http://localhost:8080/Admin/signup   
+Content-Type: application/json
+
+{
+   
+    "email":"Myadmin@gmail.com",  
+    "password":"1234567",
+    "fullname": "MY Admin"
+}
+
+
+####### checking pending nfts and confirm users
+
+GET http://localhost:8080/NFT/pending_Nft
+
+
+
+####### calculating revenue
+
+GET http://localhost:8080/Admin/revenue
